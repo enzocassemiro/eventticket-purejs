@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,400;1,300&family=Monoton&family=Oswald:wght@700&family=Roboto:wght@300&family=Titillium+Web:wght@200&display=swap');
+
+.header__top {
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+}
+
+.top__left {
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    align-items: center;
+}
+
+.left__title {
+    font-weight: 100;
+    font-family: 'Monoton', cursive;
+}
+
+.left__image {
+    width: 70px;
+}
+.top__input {
+    border: 1px solid black;
+}
+
+.top__center {
+    display: flex;
+    place-content: center center;
+    align-items: center;
+}
+
+.center__input {
+    width: 220px;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.top__right {
+    display: flex;
+    place-content: center center;
+    align-items: center;
+}
+

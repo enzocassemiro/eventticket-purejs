@@ -1,0 +1,10 @@
+.addEvent__form {
+    display: flex;
+    place-content: center center;
+}
+
+.form  {
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+}

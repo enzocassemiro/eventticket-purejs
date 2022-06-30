@@ -1,0 +1,6 @@
+.footer {
+    display: flex;
+    place-content: center center;
+    text-decoration: none;
+}
+

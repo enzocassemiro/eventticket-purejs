@@ -1,0 +1,4 @@
+.grid {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
