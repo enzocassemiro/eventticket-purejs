@@ -1,3 +1,7 @@
+body {
+    background-color: var(--background-page);
+}
+
 .grid {
     display: grid;
     grid-template-rows: min-content auto min-content;

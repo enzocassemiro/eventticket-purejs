@@ -1,24 +1,104 @@
 {
   "events": [
     {
-      "id": 0,
-      "title": "Cup Head Show",
-      "artists": "Cuphead and Mugman",
-      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/268910/header.jpg?t=1654710887",
-      "priceDefault": 666,
-      "priceVip": 1200,
+      "title": "Cup Head (DLC) - Show",
+      "artists": "Cuphead and Mugman (Real Actors)",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1117850/header.jpg?t=1656593803",
+      "priceDefault": "666",
+      "priceVip": "1200",
       "date": "2022-06-06",
-      "place": "In-game"
+      "place": "In-game",
+      "id": 0
     },
     {
-      "id": 1,
-      "title": "Euro Truck Simulator 2",
-      "artists": "Zezé de Camargo e Luciano, Chitão zinho e Chororo...",
+      "title": "Euro Truck Simulator 2 - Show",
+      "artists": "Zezé de Camargo e Luciano, Chitãozinho e Chororo",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/227300/header.jpg?t=1656428921",
-      "priceDefault": 20,
-      "priceVip": 40,
+      "priceDefault": "20",
+      "priceVip": "40",
       "date": "2022-04-06",
-      "place": "In-game"
+      "place": "In-game",
+      "id": 1
+    },
+    {
+      "title": "The Elder Scrolls® - Talk Show",
+      "artists": "Developers: ZeniMax Online Studios",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/306130/header.jpg?t=1655833559",
+      "priceDefault": "18.45",
+      "priceVip": "209.00",
+      "date": "2022-08-07",
+      "place": "Theater Renault",
+      "id": 2
+    },
+    {
+      "title": "F1® 22",
+      "artists": "Leclerc, Nando, Russel",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1692250/header.jpg?t=1656657005",
+      "priceDefault": "249",
+      "priceVip": "349",
+      "date": "2022-09-10",
+      "place": "In-game",
+      "id": 3
+    },
+    {
+      "title": "FIFA 22 - Show",
+      "artists": "Mbappe, Messi, Neymar",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1506830/header.jpg?t=1653581021",
+      "priceDefault": "244.30",
+      "priceVip": "1200",
+      "date": "2022-07-20",
+      "place": "Maracanã",
+      "id": 4
+    },
+    {
+      "title": "PGA TOUR 2K21",
+      "artists": "Nick Faldo, Greg Norman",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1016120/header.jpg?t=1644357004",
+      "priceDefault": "1200",
+      "priceVip": "5000",
+      "date": "2022-08-10",
+      "place": "Clube de Campo São Paulo",
+      "id": 5
+    },
+    {
+      "title": "DayZ - Strategies",
+      "artists": "Bear Grills",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/221100/header_alt_assets_18.jpg?t=1655998809",
+      "priceDefault": "71,99",
+      "priceVip": "144,98",
+      "date": "2022-07-07",
+      "place": "Parque Estadual da Cantareira",
+      "id": 6
+    },
+    {
+      "title": "Farming Simulator 22",
+      "artists": "Antônio Fagundes (Rei do Gado)",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1248130/header.jpg?t=1656520835",
+      "priceDefault": "25",
+      "priceVip": "110",
+      "date": "2022-10-15",
+      "place": "In-game",
+      "id": 7
+    },
+    {
+      "title": "DEATH STRANDING - Talk Show",
+      "artists": "Hideo Kojima",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1850570/header.jpg?t=1649438096",
+      "priceDefault": "150",
+      "priceVip": "500",
+      "date": "2022-08-24",
+      "place": "Konami, Tokyo",
+      "id": 8
+    },
+    {
+      "title": "NBA - Game",
+      "artists": "LeBron James, Stephen Curry, Kevin Durant",
+      "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1644960/header.jpg?t=1656687987",
+      "priceDefault": "500",
+      "priceVip": "2000",
+      "date": "2022-12-12",
+      "place": "Madison Square Garden",
+      "id": 9
     }
   ]
 }
