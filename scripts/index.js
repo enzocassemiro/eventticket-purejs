@@ -1,7 +1,12 @@
 const EVENTS = document.querySelector(".events__cards");
+const FLAG = document.querySelector(".right__currency__value")
+const USER_LOCALE =
+  navigator.languages && navigator.languages.length
+    ? navigator.languages[0]
+    : navigator.language;
 
 const BASE_URL = "http://localhost:3000";
-
+const BASE_URL_COIN = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest";
 
 renderEvents();
 
@@ -13,6 +18,9 @@ async function getEvents() {
 
 async function renderEvents() {
     const events = await getEvents();
+    const currencies = await renderCurrency();
+    const coin_char = currencies[0];
+    const currencie = currencies[1];
     events.forEach(event => {
         const { id,
             title,
@@ -56,7 +64,7 @@ async function renderEvents() {
         eventArtists.innerHTML = artists;
         eventDate.innerHTML = date;
         eventPlace.innerHTML = place;
-        eventPriceStart.innerHTML = `Starts at: U$${priceDefault}`;
+        eventPriceStart.innerHTML = `Starts at: ${coin_char}$${(priceDefault*currencie).toFixed(2)}`;
 
         imageDiv.appendChild(eventImage);
         titleDiv.appendChild(eventTitle);
@@ -74,4 +82,21 @@ async function renderEvents() {
 
         EVENTS.appendChild(eventDiv);
     });
+}
+
+async function renderCurrency() {
+    const response = await fetch(`${BASE_URL_COIN}/currencies/usd.json`);
+    const currencies = await response.json()
+    const coin_char = "U"
+    const multiplier = 1
+    console.log(USER_LOCALE)
+    if (USER_LOCALE == "pt-BR") {
+        FLAG.src = "assets/images/brazilFlag.png" 
+        const coin_char = "R"
+        const multiplier = currencies.usd.brl
+        console.log(multiplier)
+        console.log(coin_char)
+        return [coin_char, multiplier]
+    }
+    return [coin_char, multiplier]
 }

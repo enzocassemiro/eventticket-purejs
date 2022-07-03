@@ -41,13 +41,11 @@
 }
 
 .top__right {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
     display: flex;
     place-content: center center;
     align-items: center;
-    font-family: 'Gantari', sans-serif;
-    background-color: #7D7CFA;
 }
 
+.right__currency__value {
+    width: 50px;
+}
