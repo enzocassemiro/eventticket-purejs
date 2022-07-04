@@ -49,3 +49,28 @@
 .right__currency__value {
     width: 50px;
 }
+
+@media screen and (max-width: 960px) {
+    .header__top {
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    .top__center {
+        display: flex;
+        place-content: center center;
+
+        margin: 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .left__title {
+        font-size: 1.2rem;
+    }
+
+    .right__currency__value {
+        width: 2rem;
+    }
+}
+    
