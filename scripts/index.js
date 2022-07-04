@@ -1,5 +1,6 @@
-const EVENTS = document.querySelector(".events__cards");
 const FLAG = document.querySelector(".right__currency__value")
+const MAIN = document.querySelector("main");
+
 const USER_LOCALE =
   navigator.languages && navigator.languages.length
     ? navigator.languages[0]
@@ -35,10 +36,14 @@ async function getEvents() {
 }
 
 async function renderEvents() {
+    renderLoader();
     const events = await getEvents();
     const currencies = await renderCurrency();
     const coin_char = currencies[0];
     const currencie = currencies[1];
+    const eventCardDiv = document.createElement('div')
+    eventCardDiv.classList.add('events__cards');
+
     events.forEach(event => {
         const { id,
             title,
@@ -97,9 +102,11 @@ async function renderEvents() {
         eventDiv.appendChild(dateDiv);
         eventDiv.appendChild(placeDiv);
         eventDiv.appendChild(priceDiv);
-
-        EVENTS.appendChild(eventDiv);
+        
+        eventCardDiv.appendChild(eventDiv);
     });
+    removeDivByClassName('.loader');
+    MAIN.appendChild(eventCardDiv);
 }
 
 async function renderCurrency() {
@@ -114,4 +121,29 @@ async function renderCurrency() {
         return [coin_char, multiplier]
     }
     return [coin_char, multiplier]
+}
+
+function renderLoader () {
+    const loaderExternalDiv = document.createElement('div');
+    const loaderPrincipalDiv = document.createElement('div');
+    const loaderEmptyDiv1 = document.createElement('div');
+    const loaderEmptyDiv2 = document.createElement('div');
+    const loaderEmptyDiv3 = document.createElement('div');
+    const loaderEmptyDiv4 = document.createElement('div');
+    
+    loaderExternalDiv.classList.add('loader');
+    loaderPrincipalDiv.classList.add('lds-ellipsis');
+
+    loaderExternalDiv.appendChild(loaderPrincipalDiv);
+    loaderPrincipalDiv.appendChild(loaderEmptyDiv1);
+    loaderPrincipalDiv.appendChild(loaderEmptyDiv2);
+    loaderPrincipalDiv.appendChild(loaderEmptyDiv3);
+    loaderPrincipalDiv.appendChild(loaderEmptyDiv4);
+
+    MAIN.appendChild(loaderExternalDiv);
+}
+
+function removeDivByClassName (className) {
+    const element = document.querySelector(className);
+    element.remove()
 }

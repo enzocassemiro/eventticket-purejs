@@ -6,3 +6,7 @@ body {
     display: grid;
     grid-template-rows: min-content auto min-content;
 }
+
+:root{
+    --color-default:#8080FA;
+}

@@ -50,7 +50,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #8080FA;
+    color: var(--color-default);
 }
 
 .card__date{
