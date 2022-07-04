@@ -11,9 +11,27 @@ const BASE_URL_COIN = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/la
 renderEvents();
 
 async function getEvents() {
-    const response = await fetch(`${BASE_URL}/events`);
-    const events = await response.json()
-    return events
+    try {
+        const response = await fetch(`${BASE_URL}/events`);
+        if (response.ok) {
+            const events = await response.json()
+            return events
+        } else{
+            throw new Error('Network response was not ok.')
+        }
+    } catch (error) {
+        try {
+            const response = await fetch("db.json");
+            if (response.ok){
+                const events = await response.json()
+                return events.events
+            } else{
+                throw new Error('Network response was not ok.')
+            }
+        } catch (error) {
+            throw new Error('Network response was not ok.')
+        }
+    }
 }
 
 async function renderEvents() {
@@ -89,13 +107,10 @@ async function renderCurrency() {
     const currencies = await response.json()
     const coin_char = "U"
     const multiplier = 1
-    console.log(USER_LOCALE)
     if (USER_LOCALE == "pt-BR") {
         FLAG.src = "assets/images/brazilFlag.png" 
         const coin_char = "R"
         const multiplier = currencies.usd.brl
-        console.log(multiplier)
-        console.log(coin_char)
         return [coin_char, multiplier]
     }
     return [coin_char, multiplier]
